@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "salary-402807",
+  "private_key_id": "1f69b6a3796d0dc569a3601b18cb8139421d33cd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCYmCUBgbEcjfhX\nrv6ejKwV+7NEAwoDSnpMIqqXe6d841iRTeX/AJ+ghroxoGfUI7pfpLaReLf2Qic3\nERsT/M7zOg9pJUfltCYeok5ERm8OIucrZEiJwtYzqRxizxQ9BK7dE9Q9DI0VbUMJ\nta6c+qNZOG3yS6QJnLiBpzlnT0ivJVH/8kWkKHNkGVj0+LXMKcJTkp5JjzJ81LTE\nI2Lfl+86dbZN7VCSesg0msVFhBVrrhL9GhEtUWpHGHePq7JpNWOsyhC091/CNQl6\nXhzXQUrhWa9P7lZ+AulzF0l1m1cGVR2G63bYyLHVLzxQj3cX2sReUM0L4XmqgbnU\nARs19UZdAgMBAAECggEAHWVv+ZiTt1nFPhUU8ZPNggWlbQR93RDvuvORtBGK/ETq\n1sEwPd4PolPaEj3hyq0gVhUL473jCKKJXfMiaYkSECq+9cVMEr0P++ZOGBqOgeVo\n7cPJsppRfA3HzWQxtKiOjEHp6OHeWwKbv8bbjtu89K7phVwbi4uAwt9lcFjGepD0\nUm5lHVSH8DieGI0pK48v4qHy5tLVb4CrxoKu82y0QWbtll5dPFHWiAu2fbntVht/\nz0x+sHCzEFLqJoVJbi3lM1+s4MC4Rkkko9tc2L1WjE5xqAZ/OWYOy9UAwS7oF7Fb\nvXbCN7r8Z9mBXk02PTfXXYbU1Rz3IT+RkcBWK7Vl8QKBgQDWVQlmdKodoKRlGXt7\nq9AeYBjl3NvT3WlPGkbBUQPHL7PhJZcRyUWFD3I6ZTmvdFflefAE8c2hWsBfaHaP\n1r8BEU4MPmR3QqZCs9G7c5dPyKTxPnW1xhsGJ4P2uMr94D8yUCe4iPVKjzxOBias\nhPkmw0gf6p/i+kR/KcpqsSfgjQKBgQC2QoPcpCsg8TxX56ZqOT4r6S2e68VQfjv9\nRQlBjydKox+nWzj6hn7tCr4rZM+8ySeIWgBNmJzu4DqpvfjbrMUkj1S8ckiIQROL\nqd8uibwsaCVOEJNvDB6xMs+4lZMuw1vW+JslQJ5+S7wWdTjkPEmZPRZdslIar61z\nK4AmI34REQKBgHp9Usf4+JfCDPGyZH3DLUeOx+vmEsO8D8kjTTiB4lTdkEGlx/Zk\nPpTSxQdWfmclaG4/B8rrngcO5E4iV0/Q/IvRpfcdWTFHJ9mLBtvILbttAcbVWVQv\nCZa00pgX9/qrQ7KvWGP/8Z9QyLgWj9ecjv92Lyv+XK3NNYQvD/11jUKpAoGBAIIF\nZ45i64Wfsv2++0AyQAERYwNJjUTEGUWwF09WsaAUSQOaF0bZ5fhyvoG0dGJoWjRy\niF7S7bmX6yGmrb8BPM69FaUuHkJdsnTjJZ1MkxpW3a4YMyV4Tvj4l6lFw28L3Ru5\n1Ow5chgFLVQUIhboT1TreGY1TU9OXn2X3d7XWRsRAoGBANEqrcvccrsGfV6FqZ5n\nhigBGE57kmTfNk5fuX5yeRDwwEKCFt6ofOcGFa7/oZoUmTcRIe4fj5bfR2G7dyBP\nG+n8mPsrU34OXcJM7LI4qrEvZxpbat9u7N56XVpRX0I/l0544cu0IfqaYp7jiju1\nlYrTmob1lGqzP+Bk7AgzAK4H\n-----END PRIVATE KEY-----\n",
+  "client_email": "amit-kumar@salary-402807.iam.gserviceaccount.com",
+  "client_id": "105092552677558277457",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/amit-kumar%40salary-402807.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
