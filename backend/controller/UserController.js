@@ -1,4 +1,4 @@
-
+import bcrypt from 'bcrypt';
 import dbConnection from '../database/db.js';
 
 export const RegisterUser = async (req, res) => {
@@ -6,8 +6,11 @@ export const RegisterUser = async (req, res) => {
     const { Id, Password, Role } = req.body;
     // console.log("Amit")
      console.log(Id , Password,Role)
+     // Hash the password
+    const password = await bcrypt.hash(Password, 10);
+
     // Check for required fields
-    if (!Id || !Password || !Role) {
+    if (!Id || !password || !Role) {
         return res.status(400).json({ error: 'Invalid request parameters' });
       }
 
@@ -16,7 +19,7 @@ export const RegisterUser = async (req, res) => {
     // Perform database operation: insert user data into registerData table
     const [result] = await connection.execute(
         'INSERT INTO RegisterData (Id, password, role) VALUES (?, ?, ?)',
-        [Id, Password, Role] // Assuming file[0].filename is the stored filename
+        [Id, password, Role] // Assuming file[0].filename is the stored filename
       );
 
     // Release the connection back to the pool
@@ -35,26 +38,40 @@ export const RegisterUser = async (req, res) => {
   }
 };
 
-export const SignInUser=async(req,res)=>{
-try {
-    const connection = await dbConnection();
-    const { Id, password } = req.body;
-    const [results] = await connection.execute('SELECT * FROM RegisterData WHERE Id = ? AND password = ?',
-    [Id, password],);
-    if (results.length > 0) {
-        // User found, send a success response
-        return res.status(200).json(results);
+export const SignInUser = async (req, res) => {
+    try {
+        const connection = await dbConnection();
+        const { Id, password } = req.body;
+        console.log(password);
+        const [results] = await connection.execute('SELECT * FROM RegisterData WHERE Id = ?',
+            [Id]);
+
+        if (results.length > 0) {
+            if (password&&results[0].password) {
+                const isPasswordMatch = await bcrypt.compare(password, results[0].password);
+                // throw error; 
+                if (isPasswordMatch) {
+                    // User found, send a success response
+                    return res.status(200).json(results);
+                } else {
+                    // Passwords do not match, send a response indicating invalid credentials
+                    return res.status(401).json({ message: 'Pasword not Match' });
+                }
+            } else {
+                // Stored password is missing, send a response indicating invalid credentials
+                return res.status(401).json({ message: 'Invalid credentials' });
+            }
+        } else {
+            // User not found, send a response indicating the user does not exist
+            return res.status(404).json({ message: 'User not found' });
+        }
+    } catch (error) {
+        // Handle errors, e.g., database connection error, etc.
+        console.error('SignIn failed:', error);
+        return res.status(500).json({ error: 'Internal Server Error' });
     }
-    else{
-        // console.log('SignIn failed:');  
-        return res.status(200).json({message:"User not found ::::: Please Register ? "});
-    }
-} catch (error) {
-    // User not found, send an error response
-    console.log('SignIn failed:', error);
-    return res.status(401).json({ error: 'Invalid credentials' });
-}
-}
+};
+
 export const addUser = async (req, res) => {
     try {
         const connection = await dbConnection();
